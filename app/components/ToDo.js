@@ -7,7 +7,7 @@ function ToDo({toDoText}) {
               id="checked-checkbox"
               type="checkbox"
               value=""
-              class="relative top-1 w-5 h-5 cursor-pointer text-blue-600 bg-gray-100 border-gray-300 self-start rounded "
+              className="relative top-1 w-5 h-5 cursor-pointer text-blue-600 bg-gray-100 border-gray-300 self-start rounded "
             />
             <p className='text-purple-950 cursor-default'>{toDoText}</p>
           </div>
