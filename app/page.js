@@ -1,17 +1,17 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
-import ToDo from "./components/ToDo";
-import { useDispatch, useSelector } from "react-redux";
-import { addTodo } from "./reduxStore/todoSlice";
+import React from "react";
+import { Provider } from "react-redux";
 import InputField from "./components/InputField";
 import AllTodosLists from "./components/AllTodosLists";
+import { store } from "./reduxStore/store";
 
 export default function Home() {
   
 
   return (
     <>
+    <Provider store={store}>
       <div className="p-2 flex flex-col w-full relative items-center">
         <nav className="flex ">
           <h1 className="text-[2.5rem] text-purple-700 font-extrabold">ToDo</h1>
@@ -31,6 +31,7 @@ export default function Home() {
         <InputField />
         <AllTodosLists />
       </div>
+      </Provider>
     </>
   );
 }
